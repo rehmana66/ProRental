@@ -4,11 +4,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Dashboard  from './assets/screens/Dashboard';
+import Dashboard from './assets/screens/Dashboard';
 import Signup from './assets/screens/Signup';
 import Signin from './assets/screens/Signin';
-import Book from './assets/screens/book';
-import Details from './assets/screens/details';
+import Book from './assets/screens/Book';
+import Details from './assets/screens/Details';
 
 
 
@@ -17,7 +17,7 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Signin">
+      <Stack.Navigator initialRouteName="Signin" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
